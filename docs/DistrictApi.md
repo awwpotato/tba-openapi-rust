@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## get_district_events
 
-> Vec<crate::models::Event> get_district_events(district_key, if_none_match)
+> Vec<models::Event> get_district_events(district_key, if_none_match)
 
 
 Gets a list of events in the given district.
@@ -34,7 +34,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Event>**](Event.md)
+[**Vec<models::Event>**](Event.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_district_events_simple
 
-> Vec<crate::models::EventSimple> get_district_events_simple(district_key, if_none_match)
+> Vec<models::EventSimple> get_district_events_simple(district_key, if_none_match)
 
 
 Gets a short-form list of events in the given district.
@@ -96,7 +96,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EventSimple>**](Event_Simple.md)
+[**Vec<models::EventSimple>**](Event_Simple.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_district_rankings
 
-> Vec<crate::models::DistrictRanking> get_district_rankings(district_key, if_none_match)
+> Vec<models::DistrictRanking> get_district_rankings(district_key, if_none_match)
 
 
 Gets a list of team district rankings for the given district.
@@ -127,7 +127,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::DistrictRanking>**](District_Ranking.md)
+[**Vec<models::DistrictRanking>**](District_Ranking.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_district_teams
 
-> Vec<crate::models::Team> get_district_teams(district_key, if_none_match)
+> Vec<models::Team> get_district_teams(district_key, if_none_match)
 
 
 Gets a list of `Team` objects that competed in events in the given district.
@@ -158,7 +158,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Team>**](Team.md)
+[**Vec<models::Team>**](Team.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_district_teams_simple
 
-> Vec<crate::models::TeamSimple> get_district_teams_simple(district_key, if_none_match)
+> Vec<models::TeamSimple> get_district_teams_simple(district_key, if_none_match)
 
 
 Gets a short-form list of `Team` objects that competed in events in the given district.
@@ -220,7 +220,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::TeamSimple>**](Team_Simple.md)
+[**Vec<models::TeamSimple>**](Team_Simple.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_districts_by_year
 
-> Vec<crate::models::DistrictList> get_districts_by_year(year, if_none_match)
+> Vec<models::DistrictList> get_districts_by_year(year, if_none_match)
 
 
 Gets a list of districts and their corresponding district key, for the given year.
@@ -251,7 +251,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::DistrictList>**](District_List.md)
+[**Vec<models::DistrictList>**](District_List.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_district_points
 
-> crate::models::EventDistrictPoints get_event_district_points(event_key, if_none_match)
+> models::EventDistrictPoints get_event_district_points(event_key, if_none_match)
 
 
 Gets a list of team rankings for the Event.
@@ -282,7 +282,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventDistrictPoints**](Event_District_Points.md)
+[**models::EventDistrictPoints**](Event_District_Points.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_districts
 
-> Vec<crate::models::DistrictList> get_team_districts(team_key, if_none_match)
+> Vec<models::DistrictList> get_team_districts(team_key, if_none_match)
 
 
 Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
@@ -313,7 +313,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::DistrictList>**](District_List.md)
+[**Vec<models::DistrictList>**](District_List.md)
 
 ### Authorization
 

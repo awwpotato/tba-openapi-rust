@@ -54,7 +54,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_matches
 
-> Vec<crate::models::Match> get_event_matches(event_key, if_none_match)
+> Vec<models::Match> get_event_matches(event_key, if_none_match)
 
 
 Gets a list of matches for the given event.
@@ -69,7 +69,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_matches_simple
 
-> Vec<crate::models::MatchSimple> get_event_matches_simple(event_key, if_none_match)
+> Vec<models::MatchSimple> get_event_matches_simple(event_key, if_none_match)
 
 
 Gets a short-form list of matches for the given event.
@@ -131,7 +131,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::MatchSimple>**](Match_Simple.md)
+[**Vec<models::MatchSimple>**](Match_Simple.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_match
 
-> crate::models::Match get_match(match_key, if_none_match)
+> models::Match get_match(match_key, if_none_match)
 
 
 Gets a `Match` object for the given match key.
@@ -162,7 +162,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::Match**](Match.md)
+[**models::Match**](Match.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_match_simple
 
-> crate::models::MatchSimple get_match_simple(match_key, if_none_match)
+> models::MatchSimple get_match_simple(match_key, if_none_match)
 
 
 Gets a short-form `Match` object for the given match key.
@@ -193,7 +193,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MatchSimple**](Match_Simple.md)
+[**models::MatchSimple**](Match_Simple.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_match_zebra
 
-> crate::models::Zebra get_match_zebra(match_key, if_none_match)
+> models::Zebra get_match_zebra(match_key, if_none_match)
 
 
 Gets Zebra MotionWorks data for a Match for the given match key.
@@ -255,7 +255,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::Zebra**](Zebra.md)
+[**models::Zebra**](Zebra.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_matches
 
-> Vec<crate::models::Match> get_team_event_matches(team_key, event_key, if_none_match)
+> Vec<models::Match> get_team_event_matches(team_key, event_key, if_none_match)
 
 
 Gets a list of matches for the given team and event.
@@ -287,7 +287,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_matches_simple
 
-> Vec<crate::models::Match> get_team_event_matches_simple(team_key, event_key, if_none_match)
+> Vec<models::Match> get_team_event_matches_simple(team_key, event_key, if_none_match)
 
 
 Gets a short-form list of matches for the given team and event.
@@ -351,7 +351,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_matches_by_year
 
-> Vec<crate::models::Match> get_team_matches_by_year(team_key, year, if_none_match)
+> Vec<models::Match> get_team_matches_by_year(team_key, year, if_none_match)
 
 
 Gets a list of matches for the given team and year.
@@ -383,7 +383,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_matches_by_year_simple
 
-> Vec<crate::models::MatchSimple> get_team_matches_by_year_simple(team_key, year, if_none_match)
+> Vec<models::MatchSimple> get_team_matches_by_year_simple(team_key, year, if_none_match)
 
 
 Gets a short-form list of matches for the given team and year.
@@ -447,7 +447,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::MatchSimple>**](Match_Simple.md)
+[**Vec<models::MatchSimple>**](Match_Simple.md)
 
 ### Authorization
 

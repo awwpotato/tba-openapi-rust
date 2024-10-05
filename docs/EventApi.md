@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**get_event**](EventApi.md#get_event) | **GET** /event/{event_key} | 
 [**get_event_alliances**](EventApi.md#get_event_alliances) | **GET** /event/{event_key}/alliances | 
 [**get_event_awards**](EventApi.md#get_event_awards) | **GET** /event/{event_key}/awards | 
+[**get_event_coprs**](EventApi.md#get_event_coprs) | **GET** /event/{event_key}/coprs | 
 [**get_event_district_points**](EventApi.md#get_event_district_points) | **GET** /event/{event_key}/district_points | 
 [**get_event_insights**](EventApi.md#get_event_insights) | **GET** /event/{event_key}/insights | 
 [**get_event_match_timeseries**](EventApi.md#get_event_match_timeseries) | **GET** /event/{event_key}/matches/timeseries | 
@@ -20,6 +21,7 @@ Method | HTTP request | Description
 [**get_event_predictions**](EventApi.md#get_event_predictions) | **GET** /event/{event_key}/predictions | 
 [**get_event_rankings**](EventApi.md#get_event_rankings) | **GET** /event/{event_key}/rankings | 
 [**get_event_simple**](EventApi.md#get_event_simple) | **GET** /event/{event_key}/simple | 
+[**get_event_team_media**](EventApi.md#get_event_team_media) | **GET** /event/{event_key}/team_media | 
 [**get_event_teams**](EventApi.md#get_event_teams) | **GET** /event/{event_key}/teams | 
 [**get_event_teams_keys**](EventApi.md#get_event_teams_keys) | **GET** /event/{event_key}/teams/keys | 
 [**get_event_teams_simple**](EventApi.md#get_event_teams_simple) | **GET** /event/{event_key}/teams/simple | 
@@ -44,7 +46,7 @@ Method | HTTP request | Description
 
 ## get_district_events
 
-> Vec<crate::models::Event> get_district_events(district_key, if_none_match)
+> Vec<models::Event> get_district_events(district_key, if_none_match)
 
 
 Gets a list of events in the given district.
@@ -59,7 +61,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Event>**](Event.md)
+[**Vec<models::Event>**](Event.md)
 
 ### Authorization
 
@@ -106,7 +108,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_district_events_simple
 
-> Vec<crate::models::EventSimple> get_district_events_simple(district_key, if_none_match)
+> Vec<models::EventSimple> get_district_events_simple(district_key, if_none_match)
 
 
 Gets a short-form list of events in the given district.
@@ -121,7 +123,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EventSimple>**](Event_Simple.md)
+[**Vec<models::EventSimple>**](Event_Simple.md)
 
 ### Authorization
 
@@ -137,7 +139,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event
 
-> crate::models::Event get_event(event_key, if_none_match)
+> models::Event get_event(event_key, if_none_match)
 
 
 Gets an Event.
@@ -152,7 +154,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::Event**](Event.md)
+[**models::Event**](Event.md)
 
 ### Authorization
 
@@ -168,7 +170,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_alliances
 
-> Vec<crate::models::EliminationAlliance> get_event_alliances(event_key, if_none_match)
+> Vec<models::EliminationAlliance> get_event_alliances(event_key, if_none_match)
 
 
 Gets a list of Elimination Alliances for the given Event.
@@ -183,7 +185,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EliminationAlliance>**](Elimination_Alliance.md)
+[**Vec<models::EliminationAlliance>**](Elimination_Alliance.md)
 
 ### Authorization
 
@@ -199,7 +201,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_awards
 
-> Vec<crate::models::Award> get_event_awards(event_key, if_none_match)
+> Vec<models::Award> get_event_awards(event_key, if_none_match)
 
 
 Gets a list of awards from the given event.
@@ -214,7 +216,38 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Award>**](Award.md)
+[**Vec<models::Award>**](Award.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_event_coprs
+
+> std::collections::HashMap<String, std::collections::HashMap<String, f64>> get_event_coprs(event_key, if_none_match)
+
+
+Gets a set of Event Component OPRs for the given Event.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**event_key** | **String** | TBA Event Key, eg `2016nytr` | [required] |
+**if_none_match** | Option<**String**> | Value of the `ETag` header in the most recently cached response by the client. |  |
+
+### Return type
+
+[**std::collections::HashMap<String, std::collections::HashMap<String, f64>>**](std::collections::HashMap.md)
 
 ### Authorization
 
@@ -230,7 +263,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_district_points
 
-> crate::models::EventDistrictPoints get_event_district_points(event_key, if_none_match)
+> models::EventDistrictPoints get_event_district_points(event_key, if_none_match)
 
 
 Gets a list of team rankings for the Event.
@@ -245,7 +278,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventDistrictPoints**](Event_District_Points.md)
+[**models::EventDistrictPoints**](Event_District_Points.md)
 
 ### Authorization
 
@@ -261,7 +294,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_insights
 
-> crate::models::EventInsights get_event_insights(event_key, if_none_match)
+> models::EventInsights get_event_insights(event_key, if_none_match)
 
 
 Gets a set of Event-specific insights for the given Event.
@@ -276,7 +309,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventInsights**](Event_Insights.md)
+[**models::EventInsights**](Event_Insights.md)
 
 ### Authorization
 
@@ -323,7 +356,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_matches
 
-> Vec<crate::models::Match> get_event_matches(event_key, if_none_match)
+> Vec<models::Match> get_event_matches(event_key, if_none_match)
 
 
 Gets a list of matches for the given event.
@@ -338,7 +371,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -385,7 +418,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_matches_simple
 
-> Vec<crate::models::MatchSimple> get_event_matches_simple(event_key, if_none_match)
+> Vec<models::MatchSimple> get_event_matches_simple(event_key, if_none_match)
 
 
 Gets a short-form list of matches for the given event.
@@ -400,7 +433,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::MatchSimple>**](Match_Simple.md)
+[**Vec<models::MatchSimple>**](Match_Simple.md)
 
 ### Authorization
 
@@ -416,7 +449,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_oprs
 
-> crate::models::EventOprs get_event_oprs(event_key, if_none_match)
+> models::EventOprs get_event_oprs(event_key, if_none_match)
 
 
 Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
@@ -431,7 +464,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventOprs**](Event_OPRs.md)
+[**models::EventOprs**](Event_OPRs.md)
 
 ### Authorization
 
@@ -478,7 +511,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_rankings
 
-> crate::models::EventRanking get_event_rankings(event_key, if_none_match)
+> models::EventRanking get_event_rankings(event_key, if_none_match)
 
 
 Gets a list of team rankings for the Event.
@@ -493,7 +526,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventRanking**](Event_Ranking.md)
+[**models::EventRanking**](Event_Ranking.md)
 
 ### Authorization
 
@@ -509,7 +542,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_simple
 
-> crate::models::EventSimple get_event_simple(event_key, if_none_match)
+> models::EventSimple get_event_simple(event_key, if_none_match)
 
 
 Gets a short-form Event.
@@ -524,7 +557,38 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::EventSimple**](Event_Simple.md)
+[**models::EventSimple**](Event_Simple.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_event_team_media
+
+> Vec<models::Media> get_event_team_media(event_key, if_none_match)
+
+
+Gets a list of media objects that correspond to teams at this event.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**event_key** | **String** | TBA Event Key, eg `2016nytr` | [required] |
+**if_none_match** | Option<**String**> | Value of the `ETag` header in the most recently cached response by the client. |  |
+
+### Return type
+
+[**Vec<models::Media>**](Media.md)
 
 ### Authorization
 
@@ -540,7 +604,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_teams
 
-> Vec<crate::models::Team> get_event_teams(event_key, if_none_match)
+> Vec<models::Team> get_event_teams(event_key, if_none_match)
 
 
 Gets a list of `Team` objects that competed in the given event.
@@ -555,7 +619,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Team>**](Team.md)
+[**Vec<models::Team>**](Team.md)
 
 ### Authorization
 
@@ -602,7 +666,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_teams_simple
 
-> Vec<crate::models::TeamSimple> get_event_teams_simple(event_key, if_none_match)
+> Vec<models::TeamSimple> get_event_teams_simple(event_key, if_none_match)
 
 
 Gets a short-form list of `Team` objects that competed in the given event.
@@ -617,7 +681,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::TeamSimple>**](Team_Simple.md)
+[**Vec<models::TeamSimple>**](Team_Simple.md)
 
 ### Authorization
 
@@ -633,7 +697,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_event_teams_statuses
 
-> ::std::collections::HashMap<String, crate::models::TeamEventStatus> get_event_teams_statuses(event_key, if_none_match)
+> std::collections::HashMap<String, models::GetTeamEventsStatusesByYear200ResponseValue> get_event_teams_statuses(event_key, if_none_match)
 
 
 Gets a key-value list of the event statuses for teams competing at the given event.
@@ -648,7 +712,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**::std::collections::HashMap<String, crate::models::TeamEventStatus>**](Team_Event_Status.md)
+[**std::collections::HashMap<String, models::GetTeamEventsStatusesByYear200ResponseValue>**](getTeamEventsStatusesByYear_200_response_value.md)
 
 ### Authorization
 
@@ -664,7 +728,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_events_by_year
 
-> Vec<crate::models::Event> get_events_by_year(year, if_none_match)
+> Vec<models::Event> get_events_by_year(year, if_none_match)
 
 
 Gets a list of events in the given year.
@@ -679,7 +743,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Event>**](Event.md)
+[**Vec<models::Event>**](Event.md)
 
 ### Authorization
 
@@ -726,7 +790,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_events_by_year_simple
 
-> Vec<crate::models::EventSimple> get_events_by_year_simple(year, if_none_match)
+> Vec<models::EventSimple> get_events_by_year_simple(year, if_none_match)
 
 
 Gets a short-form list of events in the given year.
@@ -741,7 +805,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EventSimple>**](Event_Simple.md)
+[**Vec<models::EventSimple>**](Event_Simple.md)
 
 ### Authorization
 
@@ -757,7 +821,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_awards
 
-> Vec<crate::models::Award> get_team_event_awards(team_key, event_key, if_none_match)
+> Vec<models::Award> get_team_event_awards(team_key, event_key, if_none_match)
 
 
 Gets a list of awards the given team won at the given event.
@@ -773,7 +837,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Award>**](Award.md)
+[**Vec<models::Award>**](Award.md)
 
 ### Authorization
 
@@ -789,7 +853,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_matches
 
-> Vec<crate::models::Match> get_team_event_matches(team_key, event_key, if_none_match)
+> Vec<models::Match> get_team_event_matches(team_key, event_key, if_none_match)
 
 
 Gets a list of matches for the given team and event.
@@ -805,7 +869,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -853,7 +917,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_matches_simple
 
-> Vec<crate::models::Match> get_team_event_matches_simple(team_key, event_key, if_none_match)
+> Vec<models::Match> get_team_event_matches_simple(team_key, event_key, if_none_match)
 
 
 Gets a short-form list of matches for the given team and event.
@@ -869,7 +933,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Match>**](Match.md)
+[**Vec<models::Match>**](Match.md)
 
 ### Authorization
 
@@ -885,7 +949,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_event_status
 
-> crate::models::TeamEventStatus get_team_event_status(team_key, event_key, if_none_match)
+> models::TeamEventStatus get_team_event_status(team_key, event_key, if_none_match)
 
 
 Gets the competition rank and status of the team at the given event.
@@ -901,7 +965,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::TeamEventStatus**](Team_Event_Status.md)
+[**models::TeamEventStatus**](Team_Event_Status.md)
 
 ### Authorization
 
@@ -917,7 +981,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_events
 
-> Vec<crate::models::Event> get_team_events(team_key, if_none_match)
+> Vec<models::Event> get_team_events(team_key, if_none_match)
 
 
 Gets a list of all events this team has competed at.
@@ -932,7 +996,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Event>**](Event.md)
+[**Vec<models::Event>**](Event.md)
 
 ### Authorization
 
@@ -948,7 +1012,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_events_by_year
 
-> Vec<crate::models::Event> get_team_events_by_year(team_key, year, if_none_match)
+> Vec<models::Event> get_team_events_by_year(team_key, year, if_none_match)
 
 
 Gets a list of events this team has competed at in the given year.
@@ -964,7 +1028,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::Event>**](Event.md)
+[**Vec<models::Event>**](Event.md)
 
 ### Authorization
 
@@ -1012,7 +1076,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_events_by_year_simple
 
-> Vec<crate::models::EventSimple> get_team_events_by_year_simple(team_key, year, if_none_match)
+> Vec<models::EventSimple> get_team_events_by_year_simple(team_key, year, if_none_match)
 
 
 Gets a short-form list of events this team has competed at in the given year.
@@ -1028,7 +1092,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EventSimple>**](Event_Simple.md)
+[**Vec<models::EventSimple>**](Event_Simple.md)
 
 ### Authorization
 
@@ -1075,7 +1139,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_events_simple
 
-> Vec<crate::models::EventSimple> get_team_events_simple(team_key, if_none_match)
+> Vec<models::EventSimple> get_team_events_simple(team_key, if_none_match)
 
 
 Gets a short-form list of all events this team has competed at.
@@ -1090,7 +1154,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::EventSimple>**](Event_Simple.md)
+[**Vec<models::EventSimple>**](Event_Simple.md)
 
 ### Authorization
 
@@ -1106,7 +1170,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_team_events_statuses_by_year
 
-> ::std::collections::HashMap<String, crate::models::TeamEventStatus> get_team_events_statuses_by_year(team_key, year, if_none_match)
+> std::collections::HashMap<String, models::GetTeamEventsStatusesByYear200ResponseValue> get_team_events_statuses_by_year(team_key, year, if_none_match)
 
 
 Gets a key-value list of the event statuses for events this team has competed at in the given year.
@@ -1122,7 +1186,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**::std::collections::HashMap<String, crate::models::TeamEventStatus>**](Team_Event_Status.md)
+[**std::collections::HashMap<String, models::GetTeamEventsStatusesByYear200ResponseValue>**](getTeamEventsStatusesByYear_200_response_value.md)
 
 ### Authorization
 

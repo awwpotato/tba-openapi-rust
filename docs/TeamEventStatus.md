@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**qual** | Option<[**crate::models::TeamEventStatusRank**](Team_Event_Status_rank.md)> |  | [optional]
-**alliance** | Option<[**crate::models::TeamEventStatusAlliance**](Team_Event_Status_alliance.md)> |  | [optional]
-**playoff** | Option<[**crate::models::TeamEventStatusPlayoff**](Team_Event_Status_playoff.md)> |  | [optional]
+**qual** | Option<[**models::TeamEventStatusRank**](Team_Event_Status_rank.md)> |  | [optional]
+**alliance** | Option<[**models::TeamEventStatusAlliance**](Team_Event_Status_alliance.md)> |  | [optional]
+**playoff** | Option<[**models::TeamEventStatusPlayoff**](Team_Event_Status_playoff.md)> |  | [optional]
 **alliance_status_str** | Option<**String**> | An HTML formatted string suitable for display to the user containing the team's alliance pick status. | [optional]
 **playoff_status_str** | Option<**String**> | An HTML formatter string suitable for display to the user containing the team's playoff status. | [optional]
 **overall_status_str** | Option<**String**> | An HTML formatted string suitable for display to the user containing the team's overall status summary of the event. | [optional]

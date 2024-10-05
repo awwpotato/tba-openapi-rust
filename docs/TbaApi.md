@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## get_status
 
-> crate::models::ApiStatus get_status(if_none_match)
+> models::ApiStatus get_status(if_none_match)
 
 
 Returns API status, and TBA status information.
@@ -24,7 +24,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::ApiStatus**](API_Status.md)
+[**models::ApiStatus**](API_Status.md)
 
 ### Authorization
 
